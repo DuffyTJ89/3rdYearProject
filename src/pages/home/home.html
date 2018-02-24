@@ -1,12 +1,24 @@
+<!--Resources used
+  Mark a barcode scanner app in ionic 2 : https://www.youtube.com/watch?v=bogYgE7aYL8
+  Ionic docs for Ionic 3 to check for differences to above video for our Ionic 3 app : https://ionicframework.com/docs/native/barcode-scanner/
+-->
+
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Card Wallet App
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+  <div *ngIf="resultsUI">
+        <p>{{resultsUI.text}}</p>
+        <p>{{resultsUI.format}}</p>
+        <p>{{resultsUI.cancelled}}</p>
+  </div>
+
+  <button ion-button (click)="scanBarcode()" >Scan</button>
   
-  Hello world
 </ion-content>
