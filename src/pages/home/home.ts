@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import{BarcodeScanner, BarcodeScannerOptions} from '@ionic-native/barcode-scanner'
+import{BarcodeScanner, BarcodeScannerOptions} from '@ionic-native/barcode-scanner';
+
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'page-home',
@@ -11,7 +13,11 @@ export class HomePage {
   options: BarcodeScannerOptions; //options variable of type BarcodeScannerOptions
   resultsUI:{}; //used to dispaly the scanned results in the user interface 
 
-  constructor(private barcode: BarcodeScanner, public navCtrl: NavController) { //get instances of these
+  test = {test:'this is test data'};
+
+  constructor(private barcode: BarcodeScanner, public navCtrl: NavController, public db: AngularFireDatabase) { //get instances of these
+  
+   this.db.list('test').push(this.test);
   }
 
   async scanBarcode(){ //an asynchronous function

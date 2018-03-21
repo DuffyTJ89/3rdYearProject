@@ -8,6 +8,10 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {BarcodeScanner} from '@ionic-native/barcode-scanner';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -15,7 +19,17 @@ import {BarcodeScanner} from '@ionic-native/barcode-scanner';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp( 
+      {
+        apiKey: "AIzaSyB4A-zp6B0yLSz7naF4RZSGjvcG86eMN4A",
+        authDomain: "barcodeapp-88f71.firebaseapp.com",
+        databaseURL: "https://barcodeapp-88f71.firebaseio.com",
+        projectId: "barcodeapp-88f71",
+        storageBucket: "barcodeapp-88f71.appspot.com",
+        messagingSenderId: "879323509074"
+      }),
+      AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
