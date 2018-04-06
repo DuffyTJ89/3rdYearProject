@@ -27,4 +27,8 @@ export class HomePage {
     console.log(results); 
   }
 
+  /*async storeBarcode(){ //an asynchronous function
+
+    this.db.list('barcode').push(this.resultsUI);
+  }*/
 }
