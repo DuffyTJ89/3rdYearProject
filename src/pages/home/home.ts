@@ -13,11 +13,11 @@ export class HomePage {
   options: BarcodeScannerOptions; //options variable of type BarcodeScannerOptions
   resultsUI:{}; //used to dispaly the scanned results in the user interface 
 
-  test = {test:'this is test data'};
+  //test = {test:'this is test data'};
 
   constructor(private barcode: BarcodeScanner, public navCtrl: NavController, public db: AngularFireDatabase) { //get instances of these
   
-   this.db.list('test').push(this.test);
+    //this.db.list('test').push(this.test);
   }
 
   async scanBarcode(){ //an asynchronous function
@@ -27,8 +27,8 @@ export class HomePage {
     console.log(results); 
   }
 
-  /*async storeBarcode(){ //an asynchronous function
+  async storeBarcode(){ //an asynchronous function
 
     this.db.list('barcode').push(this.resultsUI);
-  }*/
+  }
 }
