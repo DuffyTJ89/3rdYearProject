@@ -19,6 +19,13 @@
         <p>{{resultsUI.cancelled}}</p>
   </div>
 
+  <div *ngIf="dbBarcode">
+    <p>From Databse</p>
+    <p>{{dbBarcode.text}}</p>
+    <p>{{dbBarcode.format}}</p>
+    <p>{{dbBarcode.cancelled}}</p>
+</div>
+
   <button ion-button (click)="scanBarcode()" >Scan</button>
   
 

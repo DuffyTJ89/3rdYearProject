@@ -13,7 +13,7 @@ export class HomePage {
 
   options: BarcodeScannerOptions; //options variable of type BarcodeScannerOptions
   resultsUI:{}; //used to dispaly the scanned results in the user interface 
-  generateBarcode; 
+  dbBarcode:{};
 
   //test = {test:'this is test data'};
 
@@ -28,7 +28,6 @@ export class HomePage {
     this.resultsUI = await this.barcode.scan(); //results for user interface
     console.log(results); 
     
-
   }
 
   async storeBarcode(){ //an asynchronous function
@@ -46,6 +45,7 @@ export class HomePage {
 
   async getBarcode(){
 
-       
+
+    //this.db.list('barcode').valueChanges().subscribe(this.dbBarcode);
   }
 }
