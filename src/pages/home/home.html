@@ -26,11 +26,14 @@
     <p>{{dbBarcode.cancelled}}</p>
 </div>
 
-  <button ion-button (click)="scanBarcode()" >Scan</button>
-  
+<ion-footer no-border text-center>
+    <ion-toolbar color="dark">
 
-  <button ion-button (click)="storeBarcode()" >Store</button>
+        <button ion-button (click)="scanBarcode()"  ><ion-icon name="md-qr-scanner"></ion-icon>&nbsp;&nbsp; Scan</button>
+        <button ion-button (click)="storeBarcode()" ><ion-icon name="md-cloud-upload"></ion-icon>&nbsp;&nbsp; Store</button>
+        <button ion-button (click)="getBarcode()" ><ion-icon name="md-cloud-download"></ion-icon>&nbsp;&nbsp; Get barcodes</button>
 
-  <button ion-button (click)="getBarcode()" >Get barcodes</button>
+    </ion-toolbar>
+</ion-footer>
   
 </ion-content>
