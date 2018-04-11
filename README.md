@@ -68,7 +68,10 @@ https://ionicframework.com/docs/intro/deploying/
 | Adding Firebase to Ionic3 app : | http://javasampleapproach.com/ionic/ionic-3-firebase-integrate-firebase-in-ionic-3-project-with-angularfire2|
 
 
+  
 Authors:
 > Peter Larkin 
+
 > James Kennedy 
+
 > Thomas Duffy 
