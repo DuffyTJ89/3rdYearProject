@@ -49,7 +49,7 @@ export class HomePage {
     //this.db.list('barcode').valueChanges().subscribe(this.dbBarcode);
     this.db.database.ref('/barcode/').on('value', resp => {
       console.log(resp)
-      this.dbBarcode = (resp);
+      this.dbBarcode = resp;
    });
 
   }
