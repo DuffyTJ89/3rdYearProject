@@ -14,16 +14,14 @@
 <ion-content padding>
 
   <div *ngIf="resultsUI">
-        <p>{{resultsUI.text}}</p>
-        <p>{{resultsUI.format}}</p>
-        <p>{{resultsUI.cancelled}}</p>
+        <p>Code from scan : {{resultsUI.text}}</p>
+        <p>Type scanned : {{resultsUI.format}}</p>
+        <p>Scan cancelled :{{resultsUI.cancelled}}</p>
   </div>
 
   <div *ngIf="dbBarcode">
     <p>From Databse</p>
-    <p>{{dbBarcode.text}}</p>
-    <p>{{dbBarcode.format}}</p>
-    <p>{{dbBarcode.cancelled}}</p>
+    <p>Database code :{{dbBarcode.text}}</p>
 </div>
 
 <ion-footer no-border text-center>
