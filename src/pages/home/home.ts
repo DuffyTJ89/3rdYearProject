@@ -10,6 +10,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  itemsRef: any;
 
   options: BarcodeScannerOptions; //options variable of type BarcodeScannerOptions
   resultsUI:{}; //used to dispaly the scanned results in the user interface 
@@ -36,6 +37,8 @@ export class HomePage {
 
     this.db.list('barcode').push(this.resultsUI);
 
+    
+
     let alert = this.alertCtrl.create({
       title: 'Bar code stored',
       buttons: ['OK']
@@ -45,12 +48,22 @@ export class HomePage {
 
   async getBarcode(){
 
-
+    
     //this.db.list('barcode').valueChanges().subscribe(this.dbBarcode);
-    this.db.database.ref('/barcode/').on('value', resp => {
+    /*this.db.database.ref('/barcode/').on('value', resp => {
       console.log(resp)
       this.dbBarcode = resp;
    });
+*/
 
+    this.itemsRef = this.db.list('barcode');
+this.itemsRef.snapshotChanges(['child_added'])
+  .subscribe(actions => {
+    actions.forEach(action => {
+      console.log(action.text);
+      this.dbBarcode = (action.text);
+    });
+
+  });
   }
 }
