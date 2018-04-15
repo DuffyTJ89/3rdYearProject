@@ -55,7 +55,7 @@ export class HomePage {
       this.dbBarcode = resp;
    });
 */
-
+/*
     this.itemsRef = this.db.list('barcode');
 this.itemsRef.snapshotChanges(['child_added'])
   .subscribe(actions => {
@@ -64,6 +64,6 @@ this.itemsRef.snapshotChanges(['child_added'])
       this.dbBarcode = (action.text);
     });
 
-  });
+  });*/
   }
 }
