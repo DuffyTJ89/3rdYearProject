@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+//import { DbBarcodesPage } from '../pages/db-barcodes/db-barcodes';
 
 //imports for retrieving data from firebase database
 //import { AngularFireDatabase } from 'angularfire2/database';

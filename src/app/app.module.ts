@@ -6,6 +6,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+
+import { DbBarcodesPage } from '../pages/db-barcodes/db-barcodes';
+
+
+
 import {BarcodeScanner} from '@ionic-native/barcode-scanner';
 
 import { AngularFireModule } from 'angularfire2';
@@ -15,7 +20,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    DbBarcodesPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    DbBarcodesPage
   ],
   providers: [
     StatusBar,

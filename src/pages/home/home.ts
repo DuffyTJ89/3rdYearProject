@@ -4,6 +4,7 @@ import{BarcodeScanner, BarcodeScannerOptions} from '@ionic-native/barcode-scanne
 
 import { AngularFireDatabase } from 'angularfire2/database';
 
+import { DbBarcodesPage } from '../db-barcodes/db-barcodes';
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,7 @@ export class HomePage {
 
   options: BarcodeScannerOptions; //options variable of type BarcodeScannerOptions
   resultsUI:{}; //used to dispaly the scanned results in the user interface 
-  dbBarcode:{};
+  //dbBarcode:{};
 
   //test = {test:'this is test data'};
 
@@ -48,22 +49,7 @@ export class HomePage {
 
   async getBarcode(){
 
-    
-    //this.db.list('barcode').valueChanges().subscribe(this.dbBarcode);
-    /*this.db.database.ref('/barcode/').on('value', resp => {
-      console.log(resp)
-      this.dbBarcode = resp;
-   });
-*/
-/*
-    this.itemsRef = this.db.list('barcode');
-this.itemsRef.snapshotChanges(['child_added'])
-  .subscribe(actions => {
-    actions.forEach(action => {
-      console.log(action.text);
-      this.dbBarcode = (action.text);
-    });
-
-  });*/
+    this.navCtrl.push(DbBarcodesPage);
+ 
   }
 }
