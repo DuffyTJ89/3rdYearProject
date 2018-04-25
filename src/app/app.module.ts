@@ -28,12 +28,12 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp( 
       {
-        apiKey: "AIzaSyB4A-zp6B0yLSz7naF4RZSGjvcG86eMN4A",
-        authDomain: "barcodeapp-88f71.firebaseapp.com",
-        databaseURL: "https://barcodeapp-88f71.firebaseio.com",
-        projectId: "barcodeapp-88f71",
-        storageBucket: "barcodeapp-88f71.appspot.com",
-        messagingSenderId: "879323509074"
+        apiKey: "AIzaSyCon1dDI5j1KznUjaPR670Uxgjy8BI5I6k",
+        authDomain: "card-wallet-35cec.firebaseapp.com",
+        databaseURL: "https://card-wallet-35cec.firebaseio.com",
+        projectId: "card-wallet-35cec",
+        storageBucket: "card-wallet-35cec.appspot.com",
+        messagingSenderId: "229471668390"
       }),
       AngularFireDatabaseModule
   ],
